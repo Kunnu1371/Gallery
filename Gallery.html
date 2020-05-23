@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gallery</title>
+        <style>
+            body{
+                background-color: black;
+                margin-top: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .thumbnails img{
+                height: 80px;
+                border: 4px solid #555;
+                padding: 1px;
+                margin: 0 10px 10px 0;
+            }
+            .thumbnails img:hover{
+                border-color: lightblue;
+            }
+            .preview img{
+                border: 4px solid #444;
+                padding: 1px;
+                max-width: 60%;
+            }
+            img:hover{
+                cursor: pointer;
+            }
+            div{
+                text-align: center;
+            }
+ 
+            @media only screen and (min-width:320px) {
+                .preview img{
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="color: whitesmoke;">My Webpage Gallery</h1>
+            <br>
+            <div class="thumbnails">
+                <img onmouseover= "preview.src=img1.src" id="img1" src="img1.jpg">
+                <img onmouseover= "preview.src=img2.src" id="img2" src="img2.jpg" >
+                <img onmouseover= "preview.src=img3.src" id="img3" src="img3.jpg">
+                <img onmouseover= "preview.src=img4.src" id="img4" src="img4.jpg">
+                <img onmouseover= "preview.src=img5.src" id="img5" src="img5.jpg">
+            </div>
+            <br>
+            <div class="preview" style="text-align: center;">
+                <img id="preview" src="img1.jpg">
+            </div>
+
+            
+        </div>
+    </body>
+</html>
